@@ -3,35 +3,31 @@ body {
   justify-content: center;
   align-items: center;
   height: 100vh;
-  margin: 0; /* Remove default margin for body */
-
+  margin: 0; /* Remove default body margin */
   background: linear-gradient(rgb(0, 249, 236), rgb(71, 150, 229));
 }
 
 .container {
-  text-align: center; /* Center text content */
+  text-align: center;
 }
 
 #noButton {
-  position: absolute;
-  margin-left: 100px;
+  position: relative; /* Change to relative for dynamic positioning */
+  margin: 10px; /* Add margin to separate buttons */
   transition: 0.5s;
-  margin-top: 30px;
 }
 
 #yesButton {
-  position: absolute;
-  margin-right: 200px;
-  margin-top: 30px;
+  position: relative; /* Change to relative for dynamic positioning */
+  margin: 10px; /* Add margin to separate buttons */
 }
 
 .header_text {
   font-family: "Nunito";
   font-size: 30px; /* Adjust font size for mobile */
   font-weight: bold;
-  margin-top: 20px;
-  margin-bottom: 20px;
   color: #ffffff;
+  margin: 20px 0; /* Adjust margin for better spacing */
 }
 
 .text {
@@ -39,23 +35,35 @@ body {
   font-size: 18px; /* Adjust font size for mobile */
   font-weight: bold;
   color: white;
-  margin-top: 20px;
-  margin-bottom: 0px;
+  margin: 20px 0; /* Adjust margin for better spacing */
 }
 
 .buttons {
   display: flex;
-  flex-direction: column; /* Change direction for better stacking on mobile */
+  flex-direction: column; /* Change to column for better stacking on mobile */
   justify-content: center;
   align-items: center;
   margin-top: 20px;
-  margin-left: 20px;
 }
 
 .btn {
+  background-color: #017cff;
+  color: white;
+  font-weight: 600;
+  padding: 12px 24px; /* Adjust padding for better button size on mobile */
+  text-align: center;
   font-size: 14px; /* Adjust font size for mobile */
-  padding: 10px 20px; /* Adjust padding for better button size on mobile */
-  margin: 4px 0; /* Adjust margin for better spacing on mobile */
+  margin: 8px 0; /* Adjust margin for better spacing on mobile */
+  cursor: pointer;
+  border: none;
+  border-radius: 12px;
+  transition: background-color 0.3s ease;
+  box-shadow: 0 3px 3px black;
+}
+
+.btn:hover {
+  background-color: #ffffff;
+  color: #017cff;
 }
 
 .gif_container {
@@ -66,8 +74,7 @@ body {
 
 p {
   color: white;
-  text-align: center; /* Center text content */
-  font-size: 16px; /* Adjust font size for mobile */
+  margin-left: 50%;
 }
 
 p a {
