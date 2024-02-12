@@ -17,14 +17,14 @@
       </div>
       <div class="buttons">
         <button class="btn" id="yesButton" onclick="nextPage()">Yes</button>
-          <button
+        <button
           class="btn"
           id="noButton"
           onmouseover="moveButton()"
           onclick="moveButton()"
-          >
-            No
-          </button>
+        >
+          No
+        </button>
 
         <script>
           function nextPage() {
@@ -32,16 +32,18 @@
           }
 
           function moveButton() {
+            var button = document.getElementById("noButton");
             var x =
-              Math.random() *
-              (window.innerWidth -
-                document.getElementById("noButton").offsetWidth);
+              Math.random() * (150 - button.offsetWidth); // Set a specific value for the horizontal boundary
             var y =
-              Math.random() *
-              (window.innerHeight -
-                document.getElementById("noButton").offsetHeight);
-            document.getElementById("noButton").style.left = `${x}px`;
-            document.getElementById("noButton").style.top = `${y}px`;
+              Math.random() * (150 - button.offsetHeight); // Set a specific value for the vertical boundary
+
+            // Ensure the button stays within the bounds of the screen
+            x = Math.min(Math.max(x, 0), 150 - button.offsetWidth);
+            y = Math.min(Math.max(y, 0), 150 - button.offsetHeight);
+
+            button.style.left = `${x}px`;
+            button.style.top = `${y}px`;
           }
         </script>
       </div>
