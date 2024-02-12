@@ -14,7 +14,6 @@ body {
 
 #noButton,
 #yesButton {
-  position: absolute; /* Reset position */
   margin: 10px 0; /* Add margin for better spacing on mobile */
   transition: 0.5s;
 }
